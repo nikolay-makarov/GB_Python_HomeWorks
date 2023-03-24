@@ -14,4 +14,4 @@ def is_palindrome(string, index=0):
 
 
 print(is_palindrome('12321'))  # Палиндром
-print(is_palindrome('123456'))
+print(is_palindrome('123456'))  # Не палиндром
