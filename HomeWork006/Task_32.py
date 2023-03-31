@@ -8,13 +8,21 @@
 15
 Вывод: [1, 9, 13, 14, 19]
 """
+import time
 array = [int(num) for num in input('Введите элементы массива (через запятую и пробел): ').split(', ')]
 lower_limit = int(input('Нижняя граница диапазона: '))
 upper_limit = int(input('Верхняя граница диапазона: '))
 result = []
 
+start = time.perf_counter()
 for index in range(len(array)):
     if lower_limit <= array[index] <= upper_limit:
         result.append(index)
+stop = time.perf_counter()
+print(stop - start)
 
+start2 = time.perf_counter()
+res = [i for i in range(len(array)) if lower_limit <= array[i] <= upper_limit]
+stop2 = time.perf_counter()
+print(stop2 - start2)
 print(result)
